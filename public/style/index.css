@@ -1,0 +1,207 @@
+body,
+html {
+  padding: 1rem;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.flova_popup {
+  width: 100px;
+  height: 100px;
+}
+
+.fit_container {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.flovatar_cell {
+  max-width: 40px;
+    max-height: 40px;
+  border: 1px solid #000000;
+  padding: 0px 3px 0px 2px;
+  background-color: #14002e;
+  text-align: center;
+  cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+#game_container {
+  float: left;
+  border: 1px solid #ffffff;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 35px;
+  height: 25px;
+  border: 1px solid #000000;
+  padding: 10px 5px 5px 5px;
+
+  background-color: #ff00f2;
+
+  font-size: 16px;
+  text-align: center;
+  box-shadow: inset 5px 5px 10px #8c00ff, inset -3px -3px 5px #000000;
+
+  cursor: pointer;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.cell::selection {
+  background: transparent;
+}
+
+.cell.revealed,
+.cell.flagged {
+  cursor: default;
+}
+
+.cell.revealed {
+  background-color: #14002e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: large;
+  color: #ffffff;
+}
+
+.cell.adj-1 {
+  color: 'blue';
+}
+
+.cell.adj-2 {
+  color: 'green';
+}
+
+.cell.adj-3 {
+  color: 'red';
+}
+
+.cell.adj-4 {
+  color: 'purple';
+}
+
+.cell.adj-5 {
+  color: 'maroon';
+}
+
+.cell.adj-6 {
+  color: 'turquoise';
+}
+
+.cell.adj-7 {
+  color: 'black';
+}
+
+.cell.adj-8 {
+  color: 'white';
+}
+
+.cell.adj-M {
+  font-family: "FontAwesome";
+  background-color: #ff0000;
+}
+
+.cell.adj-M:after {
+  content: '\1F480';
+  /* content: '\1F4A3'; bomb*/
+  /* content: '\1F47D'; alien*/
+  /* content: '\1F4A3'; bomb*/
+}
+
+.cell.flagged {
+  font-family: "FontAwesome";
+}
+
+.cell.flagged:after {
+  content: '\1F6A9';
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.status_msg {
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 50px;
+}

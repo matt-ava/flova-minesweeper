@@ -1,0 +1,44 @@
+<script src="./js/minesweeper.js"></script>
+<link href="./style/index.css" rel="stylesheet" type="text/css">
+<button id="auth" type="button" value="Connect Wallet" onclick="connectWallet()">Connect Wallet</button>
+
+<h2>FlovaMineSweeper</h2>
+
+<div class="clearfix">
+  <div id="game_container">
+    <!--placeholder for game -->
+  </div>
+</div>
+
+<div>
+  <div style="margin: 10px 0px;">
+    Left Click to reveal a cell, Right Click to flag a cell
+  </div>
+  <div class="status_msg">
+    <strong>Flovatars Remaining:</strong> <span id="flova_count"></span>/<span id="flova_total"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Mines Remaining:</strong> <span id="mine_count"></span>/<span id="mine_total"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Moves Made:</strong> <span id="moves_made"></span>
+  </div>
+  <div class="status_msg">
+    <strong>Game Status:</strong> <span id="game_status"></span>
+  </div>
+
+  <div style="margin: 10px 0px;">
+    <input id="validate_button" type="button" value="Did I win?" />
+  </div>
+
+  <div style="margin: 15px 0px;">
+    <input id="new_game_button" type="button" value="Create new game!" />
+  </div>
+</div>
+<script lang="javascript">
+  
+  function connectWallet() {
+    alert('wallet connection...')
+  };
+
+</script>
